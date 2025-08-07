@@ -2,216 +2,231 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A basic HTML page demonstrating metadata usage.">
-    <meta name="keywords" content="HTML, metadata, basic, example">
-    <meta name="author" content="Anjeza">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-    <title>Quick Start</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A basic HTML page demonstrating metadata usage.">
+  <meta name="keywords" content="HTML, metadata, basic, example">
+  <meta name="author" content="Anjeza">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-jsx.min.js"></script>
+  <title>React Learning Page</title>
 </head>
 
 <body>
-    <!--Top Menu -->
-    <header>
-        <nav>
-             <a href="https://react.dev/" alt="logo">React</a>
-             <a href="https://react.dev/versions" alt="v19.1">v19.1</a>
-             <div>
-                <form>
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                    <input type="text" placeholder="Search" name="search">
-                </form>
-            </div>
-             <a href="#">Learn</a>
-             <a href="#">Reference</a>
-             <a href="#">Community</a>
-             <a href="#">Blog</a>
-             <a href="#"><i class="bi bi-moon"></i></a>
-             <a href="#"><i class="bi bi-translate"></i></a>
-             <a href="#"><i class="bi bi-github"></i></a>
+
+  <!-- Announcement -->
+  <div id="announcement">
+    Join us for React Conf on Oct 7–8. <a href="#">Learn more.</a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="top-nav">
+      <div id="logo">
+        <img src="https://react.dev/favicon.ico" alt="React Logo" />
+        <a href="https://react.dev/">React</a>
+        <a href="https://react.dev/versions">v19.1</a>
+      </div>
+
+      <form id="search-form">
+        <i class="bi bi-search"></i>
+        <input type="text" placeholder="Search" />
+        <kbd>Ctrl</kbd><kbd>K</kbd>
+      </form>
+
+      <nav id="nav-links">
+        <a id="blue-learn" class="blue-selection" href="https://react.dev/learn">Learn</a>
+        <a href="#">Reference</a>
+        <a href="#">Community</a>
+        <a href="#">Blog</a>
+        <a href="#"><i class="bi bi-moon"></i></a>
+        <a href="#"><i class="bi bi-translate"></i></a>
+        <a href="#"><i class="bi bi-github"></i></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="main-layout">
+
+    <!-- Left Sidebar -->
+    <aside class="left-sidebar">
+      <div>
+        <h5>GET STARTED</h5>
+        <ul>
+          <li><a id="blue-quick-start" class="first-menu blue-selection" href="https://react.dev/learn">Quick Start<i class="bi bi-caret-right-fill"></i></a></li>
+          <li><a class="menu-item" href="https://react.dev/learn/tutorial-tic-tac-toe">Tutorial: Tic-Tac-Toe</a></li>
+          <li><a class="menu-item" href="https://react.dev/learn/thinking-in-react">Thinking in React</a></li>
+
+          <li><a class="first-menu" href="https://react.dev/learn/installation">Installation<i class="bi bi-caret-right-fill"></i></a></li>
+          <li><a href="https://react.dev/learn/creating-a-react-app">Creating a React App</a></li>
+          <li><a href="https://react.dev/learn/build-a-react-app-from-scratch">Build a React App from Scratch</a></li>
+          <li><a href="https://react.dev/learn/add-react-to-an-existing-project">Add React to an Existing Project</a></li>
+
+          <li><a class="first-menu" href="https://react.dev/learn/setup">Setup <i id="setup-icon" class="bi bi-caret-right-fill"></i></a></li>
+          <li><a href="https://react.dev/learn/editor-setup">Editor Setup</a></li>
+          <li><a href="https://react.dev/learn/typescript">Using TypeScript</a></li>
+          <li><a href="https://react.dev/learn/react-developer-tools">React Developer Tools</a></li>
+
+          <li><a class="first-menu" href="https://react.dev/learn/react-compiler">React Compiler<i id="react-compiler" class="bi bi-caret-right-fill"></i></a></li>
+          <li><a href="https://react.dev/learn/react-compiler/introduction">Introduction</a></li>
+          <li><a href="https://react.dev/learn/react-compiler/installation">Installation</a></li>
+          <li><a href="https://react.dev/learn/react-compiler/incremental-adoption">Incremental Adoption</a></li>
+          <li><a href="https://react.dev/learn/react-compiler/debugging">Debugging and Troubleshooting</a></li>
         </ul>
-        </nav>
-    </header>
 
-    <!--Side Menu Left-->
-        <aside>
-            <nav>
-                <h2>GET STARTED</h2>
-                    <li><a href="https://react.dev/learn">Quick Start</a>
-                        <ul>
-                            <li><a href="https://react.dev/learn/tutorial-tic-tac-toe">Tutorial: Tic-Tac-Toe</a></li>
-                            <li><a href="https://react.dev/learn/thinking-in-react">Thinking in React</a></li>
-                        </ul>
-                    </li>
+        <hr>
 
-                    <li><a href="https://react.dev/learn/installation">Installation</a>
-                        <ul>
-                            <li><a href="https://react.dev/learn/creating-a-react-app">Creating a React App</a></li>
-                            <li><a href="https://react.dev/learn/build-a-react-app-from-scratch">Build a React app from Scratch</a></li>
-                            <li><a href="https://react.dev/learn/add-react-to-an-existing-project">Add React to an Existing Project</a></li>
-                        </ul>
-                    </li>
-
-                
-                    <li><a href="https://react.dev/learn/setup">Setup</a>
-                        <ul>
-                            <li><a href="https://react.dev/learn/editor-setup">Editor Setup</a></li>
-                            <li><a href="https://react.dev/learn/typescript">Using TypeScript</a></li>
-                            <li><a href="https://react.dev/learn/react-developer-tools">React Developer Tools</a></li>
-                        </ul>
-                    </li>
+        <h5>LEARN REACT</h5>
+        <ul>
+          <li><a class="first-menu" href="https://react.dev/learn/describing-the-ui">Describing the UI<i id="describing-the-ui" class="bi bi-caret-right-fill"></i></a></li>
+          <li><a href="https://react.dev/learn/your-first-component">Your First Component</a></li>
+          <li><a href="https://react.dev/learn/importing-and-exporting-components">Importing and Exporting Components</a></li>
+          <li><a href="https://react.dev/learn/writing-markup-with-jsx">Writing Markup with JSX</a></li>
+          <li><a href="https://react.dev/learn/javascript-in-jsx-with-curly-braces">JavaScript in JSX with Curly
+              Braces</a></li>
+          <li><a href="https://react.dev/learn/conditional-rendering">Conditional Rendering</a></li>
+          <li><a href="https://react.dev/learn/rendering-lists">Rendering Lists</a></li>
+          <li><a href="https://react.dev/learn/keeping-components-pure">Keeping Components Pure</a></li>
+          <li><a href="https://react.dev/learn/understanding-your-ui-as-a-tree">Your UI as a Tree</a></li>
 
 
-                    <li><a href="https://react.dev/learn/react-compiler">React Compiler</a>
-                        <ul>
-                            <li><a href="https://react.dev/learn/react-compiler/introduction">Introduction</a></li>
-                            <li><a href="https://react.dev/learn/react-compiler/installation">Installation</a></li>
-                            <li><a href="https://react.dev/learn/react-compiler/incremental-adoption">Incremental Adoption</a></li>
-                            <li><a href="https://react.dev/learn/react-compiler/debugging">Debugging and Troubleshooting</a></li>
-                        </ul>
-                     </li>
+          <li><a class="first-menu" href="https://react.dev/learn/managing-state">Managing State<i id="managing-state" class="bi-caret-right-fill"></i></a></li>
+          <li><a href="https://react.dev/learn/reacting-to-input-with-state">Reacting to Input with State</a></li>
+          <li><a href="https://react.dev/learn/choosing-the-state-structure">Choosing the State Structure</a></li>
+          <li><a href="https://react.dev/learn/sharing-state-between-components">Sharing State Between Components</a>
+          </li>
+          <li><a href="https://react.dev/learn/preserving-and-resetting-state">Preserving and Resetting State</a></li>
+          <li><a href="https://react.dev/learn/extracting-state-logic-into-a-reducer">Extracting State Logic into a
+              Reducer</a></li>
+          <li><a href="https://react.dev/learn/passing-data-deeply-with-context">Passing Data Deeply with Context</a>
+          </li>
+          <li><a href="https://react.dev/learn/scaling-up-with-reducer-and-context">Scaling Up with Reducer and
+              Context</a></li>
 
-                <h2>LEARN REACT</h2>
-               
-                    <li><a href="https://react.dev/learn/describing-the-ui">Describing the UI</a> 
-                        <ul>
-                            <li><a href="https://react.dev/learn/your-first-component">Your First Component</a></li>
-                            <li><a href="https://react.dev/learn/importing-and-exporting-components">Importing and Exporting Components</a></li>
-                            <li><a href="https://react.dev/learn/writing-markup-with-jsx">Writing Markup with JSX</a></li>
-                            <li><a href="https://react.dev/learn/javascript-in-jsx-with-curly-braces">JavaScript in JSX with Curly Braces</a></li>
-                            <li><a href="https://react.dev/learn/conditional-rendering">Conditional Rendering</a></li>
-                            <li><a href="https://react.dev/learn/rendering-lists">Rendering Lists</a></li>
-                            <li><a href="https://react.dev/learn/keeping-components-pure">Keeping Components Pure</a></li>
-                            <li><a href="https://react.dev/learn/understanding-your-ui-as-a-tree">Your UI as a Tree</a></li>
-                        </ul>
-                    </li>
+          <li><a class="first-menu" href="https://react.dev/learn/managing-state">Escape Hatches<i id="escape-hatches" class="bi bi-caret-right-fill"></i></a></li>
+          <li><a href="https://react.dev/learn/referencing-values-with-refs">Referencing Values with Refs</a></li>
+          <li><a href="https://react.dev/learn/manipulating-the-dom-with-refs">Manipulating the DOM with Refs</a></li>
+          <li><a href="https://react.dev/learn/synchronizing-with-effects">Synchronizing with Effects</a></li>
+          <li><a href="https://react.dev/learn/you-might-not-need-an-effect">You Might Not Need an Effect</a></li>
+          <li><a href="https://react.dev/learn/lifecycle-of-reactive-effects">Lifecycle of Reactive Effects</a></li>
+          <li><a href="https://react.dev/learn/separating-events-from-effects">Separating Events from Effects</a></li>
+          <li><a href="https://react.dev/learn/removing-effect-dependencies">Removing Effect Dependencies</a></li>
+          <li><a href="https://react.dev/learn/reusing-logic-with-custom-hooks">Reusing Logic with Custom Hooks</a></li>
+        </ul>
+      </div>
+    </aside>
 
-                
-                    <li><a href="https://react.dev/learn/managing-state">Managing State</a>
-                        <ul>
-                            <li><a href="https://react.dev/learn/reacting-to-input-with-state">Reacting to Input with State</a></li>
-                            <li><a href="https://react.dev/learn/choosing-the-state-structure">Choosing the State Structure</a></li>
-                            <li><a href="https://react.dev/learn/sharing-state-between-components">Sharing State Between Components</a></li>
-                            <li><a href="https://react.dev/learn/preserving-and-resetting-state">Preserving and Resetting State</a></li>
-                            <li><a href="https://react.dev/learn/extracting-state-logic-into-a-reducer">Extracting State Logic into a Reducer</a></li>
-                            <li><a href="https://react.dev/learn/passing-data-deeply-with-context">Passing Data Deeply with Context</a></li>
-                            <li><a href="https://react.dev/learn/scaling-up-with-reducer-and-context">Scaling Up with Reducer and Context</a></li>
-                        </ul>
-                    </li>
-                
-                    <li><a href="https://react.dev/learn/escape-hatches">Escape Hatches</a>
-                        <ul>
-                            <li><a href="https://react.dev/learn/referencing-values-with-refs">Referencing Values with Refs</a></li>
-                            <li><a href="https://react.dev/learn/manipulating-the-dom-with-refs">Manipulating the DOM with Refs</a></li>
-                            <li><a href="https://react.dev/learn/synchronizing-with-effects">Synchronizing with Effects</a></li>
-                            <li><a href="https://react.dev/learn/you-might-not-need-an-effect">You Might Not Need an Effect</a></li>
-                            <li><a href="https://react.dev/learn/lifecycle-of-reactive-effects">Lifecycle of Reactive Effects</a></li>
-                            <li><a href="https://react.dev/learn/separating-events-from-effects">Separating Events from Effects</a></li>
-                            <li><a href="https://react.dev/learn/removing-effect-dependencies">Removing Effect Dependencies</a></li>
-                            <li><a href="https://react.dev/learn/reusing-logic-with-custom-hooks">Reusing Logic with Custom Hooks</a></li>
-                        </ul>
-                    </li>
-            </nav>
-        </aside>
+    <!-- Main Content -->
+    <main>
+      <a href="https://react.dev/learn">Learn React<i class="bi bi-caret-right-fill"></i></a>
+      <h1>Hello World</h1>
+      <p>
+        This is a basic HTML page demonstrating the use of metadata and a side menu for navigation.
+        <br>
+        The side menu contains links to various React learning resources.
+      </p>
 
-        <!--Main-->
-        <MAIN>
+      <div class="learn-box">
+        <h3>What we will learn</h3>
+        <ul>
+          <li>How to create and nest components</li>
+          <li>How to add markup and styles</li>
+          <li>How to display data</li>
+          <li>How to render conditions and lists</li>
+          <li>How to respond to events and update the screen</li>
+          <li>How to share data between components</li>
+        </ul>
+      </div>
+
+      <div class="react-intro">
+        <h2>What is React?</h2>
+        <p>
+          React is a JavaScript library for building user interfaces. It allows developers to create large web
+          applications that can change data without reloading the page.
+          Its key feature is the ability to build components that manage their own state, making it easier to develop
+          interactive UIs.
+        </p>
+        <img src="/pics/great programming quotes.jpg" alt="Motivational Image" style="width: 100%; height: auto;">
+      </div>
+
+      <div class="example-code">
+        <h2>Creating and nesting components</h2>
+        <p>React apps are made out of components. A component is a piece of the UI (user interface) that has its own
+          logic and appearance. A component can be as small as a button, or as large as an entire page.</p>
+        <p>React components are JavaScript functions that return markup:</p>
+
+        <pre><code class="language-jsx">
+            function MyButton() {
+            return (
+            &lt;button&gt;I'm a button&lt;/button&gt;
+            );
+          }
+        </code></pre>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <div class="footer-container">
+
+          <!-- Column 1 -->
+          <div class="footer-brand">
+            <a href="#"><span>Anjeza Inc.</span></a>
             <div>
-                <a href="https://react.dev/learn">Learn React</a>
-                <h1>Hello World</h1>
+              <a href="#"><i class="bi bi-instagram"></i> Instagram</a><br>
+              <a href="#"><i class="bi bi-facebook"></i> Facebook</a>
             </div>
+          </div>
 
-            <p>
-                This is a basic HTML page demonstrating the use of metadata and a side menu for navigation. 
-                The side menu contains links to various React learning resources, including tutorials, installation guides, and setup instructions.
-            </p>
+          <!-- Column 2 -->
+          <div>
+            <h4>Të dhëna të përgjithshme</h4>
+            <ul>
+              <li><a href="#">+35568123456</a></li>
+              <li><a href="#">Rruga Qemal Stafa</a></li>
+              <li><a href="#">From Fier</a></li>
+              <li><a href="#">Lives in Tirana</a></li>
+            </ul>
+          </div>
 
-            <div>
-                <h3>What we will learn</h3>
-                <ul>
-                    <li class="leading-relaxed mb-1">We are the best</li>
-                    <li class="leading-relaxed mb-1">React</li>
-                    <li class="leading-relaxed mb-1">Nuk e di</li>
-                    <li class="leading-relaxed mb-1">How to make money</li>
-                    <li class="leading-relaxed mb-1">Edhe dicka tjeter surprize</li>
-                </ul>
-            </div>
-
-            <h2>Fotoja qe do te na motivoje:</h2>
-            <p>Kjo eshte nje foto shume e rralle dhe renditet si me motivuesja nder mbare boten.</p>
-            
-            <div>
-                <img src="/pics/great programming quotes.jpg" alt="Motivational Image" style="width: 100%; height: auto;">
-            </div>
-        </MAIN>
-
-        <!--Side Menu Right-->
-        <div>
-            <nav>
-                <h4>Overview</h4>
-                <ul>
-                    <li class="leading-relaxed mb-1">Overview</li>
-                    <li class="leading-relaxed mb-1">Creating and nesting components</li>
-                    <li class="leading-relaxed mb-1">Writing markup with JSX</li>
-                    <li class="leading-relaxed mb-1">Adding styles</li>
-                    <li class="leading-relaxed mb-1">Displaying data</li>
-                    <li class="leading-relaxed mb-1">Rendering lists</li>
-                    <li class="leading-relaxed mb-1">Using Hooks</li>
-                    <li class="leading-relaxed mb-1">Sharing data between components</li>
-                    <li class="leading-relaxed mb-1">Next Steps</li>
-                </ul>
-            </nav>
+          <!-- Column 3 -->
+          <div>
+            <h4>Fakte interesante</h4>
+            <ul>
+              <li><a href="#">Likes going to the beach</a></li>
+              <li><a href="#">Fav food is pasta and shrimps</a></li>
+            </ul>
+          </div>
         </div>
-    
+      </div>
 
-        <!--Footer-->
-        <footer>
-            
-            <!-- Col 1 -->
-            <div>
-                <div>
-                    <a href="#" alt="Logo"><span>Anjeza Inc.</span></a>
-                </div>
+    </main>
 
-                <div>
-                    <a href="#">Instagram</a>
-                    <a href="#">Facebook</a>
-                </div>
-            </div>
+    <!-- Right Sidebar -->
+    <aside class="right-sidebar">
+      <nav>
+        <h5>ON THIS PAGE</h5>
+        <ul>
+          <li><a id="blue-overview" class="blue-selection" href="https://react.dev/learn#">Overview</a></li>
+          <li><a href="https://react.dev/learn#components">Creating and nesting components</a></li>
+          <li><a href="https://react.dev/learn#writing-markup-with-jsx">Writing markup with JSX</a></li>
+          <li><a href="https://react.dev/learn#adding-styles">Adding styles</a></li>
+          <li><a href="https://react.dev/learn#displaying-data">Displaying data</a></li>
+          <li><a href="https://react.dev/learn#conditional-rendering">Conditional rendering</a></li>
+          <li><a href="https://react.dev/learn#rendering-lists">Rendering lists</a></li>
+          <li><a href="https://react.dev/learn#responding-to-events">Responding to events</a></li>
+          <li><a href="https://react.dev/learn#updating-the-screen">Updating the screen </a></li>
+          <li><a href="https://react.dev/learn#using-hooks">Using Hooks</a></li>
+          <li><a href="https://react.dev/learn#sharing-data-between-components">Sharing data between components</a></li>
+          <li><a href="https://react.dev/learn#next-steps">Next Steps</a></li>
+        </ul>
+      </nav>
+    </aside>
 
-            <!-- Col 2 -->
-            <div>
-                <h4>Te dhena te pergjithshme</h4>
-                    <ul>
-                        <li><a href="#">+35568123456</a></li>
-                        <li><a href="#">Rruga Qemal Stafa</a></li>
-                        <li><a href="#">From Fier</a></li>
-                        <li><a href="#">Lives in Tirana</a></li>
-                        <li><a href="#">Likes going to the beach</a></li>
-                        <li><a href="#">Fav food is pasta and shrimps</a></li>
-                    </ul>
-            </div>
-
-            <!-- Col 3 -->
-            <div>
-                <h4>Fakte Interesante</h4>
-                    <ul>
-                        <li><a href="#">Likes going to the beach</a></li>
-                        <li><a href="#">Fav food is pasta and shrimps</a></li>
-                    </ul>
-            </div>
-
-            <!-- Col 4 -->
-            <div>
-                <h4>What can I do</h4>
-                    <ul>
-                        <li><a href="#">Turn your company into something magical!!</a></li>
-                        <li><a href="#">Great team communication</a></li>
-                    </ul>
-            </div>
-
-        </footer>
+  </div>
 </body>
+
 </html>

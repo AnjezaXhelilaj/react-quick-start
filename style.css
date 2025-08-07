@@ -1,0 +1,393 @@
+* {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Global Styles */
+
+h1 {
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-style: bold;
+}
+
+h5 {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgb(97, 96, 96);
+}
+
+#announcement {
+    background-color: #f8f9fa;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    font-size: 17px;
+    color: rgb(97, 96, 96);
+    font-weight: 500;
+    font-style: bold;
+}
+
+#announcement a {
+    color: #32afd1;
+    text-decoration: none;
+    font-style: bold;
+}
+
+/* Top Nav Bar */
+
+header {
+    padding: 0.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #dee2e6;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    left: -500px;
+    position: relative;
+    gap: 5px;
+}
+
+#logo img {
+    width: 35px;
+    height: 35px;
+    align-items: flex-end;
+}
+
+#logo a:nth-of-type(2) {
+    text-decoration: none;
+    font-size: 15px;
+    padding-bottom: 1px;
+    color: rgb(97, 96, 96);
+}
+
+#logo a:first-of-type {
+    color: #093e4d;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    padding: 10px 500px;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#search-form {
+    background-color: #f1f2f4;
+    border-radius: 9999px;
+    padding: 4px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 50%;
+    height: 2.5rem;
+    position: absolute;
+    left: 370px;
+}
+
+#search-form input {
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+#search-form i {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgb(97, 96, 96);
+}
+
+#search-form kbd {
+    background-color: white;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 12px;
+    color: rgb(97, 96, 96);
+    position: relative;
+    left: 600px;
+}
+
+#nav-links {
+    position: relative;
+    display: flex;
+    right: -450px;
+    gap: 2rem;
+    text-decoration: none;
+}
+
+#nav-links a {
+    color: rgb(62, 61, 61);
+    text-decoration: none;
+    font-size: 16px;
+    font-style: bold;
+}
+
+#nav-links i {
+    color: rgb(62, 61, 61);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.main-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    flex: 1;
+}
+
+aside {
+    flex: 0.8;
+}
+
+main {
+    flex: 2;
+}
+
+/* Left Sidebar */
+
+.left-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-sidebar a[href] {
+    color: #093e4d;
+    text-decoration: none;
+}
+
+.left-sidebar li{
+    margin: 25px 0;
+    font-size: 14px;
+}
+
+.left-sidebar li i {
+   position: absolute;
+   margin-left: 150px;
+}
+
+hr {
+    display: inline-block;
+    width: 70%;
+    color: #dedede;
+    opacity: 0.25;
+}
+
+a.first-menu {
+    color: #093e4d;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#describing-the-ui, #managing-state, #escape-hatches {
+    margin-left: 105px;
+}
+
+/* Drop Down Menu */
+
+#setup-icon {
+    margin-left: 190px;
+}
+
+#react-compiler {
+    margin-left: 117px;
+}
+
+/* Main Content */
+
+main>a:first-of-type {
+    color: #1c93b4;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+main i {
+    color: #1c93b4;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+main>p:first-of-type {
+    font-size: 19px;
+    line-height: 1.5;
+    color: black;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+.learn-box {
+    background-color: #faf8f8;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #edecec;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    width: 900px;
+    height: 280px;
+    margin-top: 20px;
+}
+
+.learn-box h3,
+.react-intro h2 {
+    font-size: 20px;
+    margin-top: 1rem;
+}
+
+.learn-box ul {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    color: rgb(97, 96, 96);
+}
+
+.learn-box ul li {
+    padding-top: 10px;
+}
+
+.learn-box h2 {
+    font-size: 20px;
+}
+
+.react-intro p,
+.example-code p {
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 1.5;
+    color: black;
+    margin-top: 2rem;
+    font-style: normal;
+}
+
+.react-intro {
+    background-color: #faf8f8;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #edecec;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    width: 900px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.example-code {
+    padding: 20px;
+    width: 900px;
+    height: auto;
+}
+
+.example-code h2 {
+    margin-top: 3rem;
+}
+
+/* Right Sidebar */
+
+.right-sidebar {
+    flex: 0.6;
+}
+
+.right-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.right-sidebar a[href] {
+    color: #093e4d;
+    text-decoration: none;
+}
+
+.right-sidebar li {
+    margin: 25px 0;
+    font-size: 14px;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-top: 1px solid #dee2e6;
+    width: 900px;
+    color: #333;
+}
+
+.footer a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer h4 {
+    margin-bottom: 0.5rem;
+    padding-bottom: 10px;
+    color: #000;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    margin-bottom: 0.6rem;
+    font-style: none;
+}
+
+.footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer .footer-brand a {
+    font-size: 14px;
+    color: black;
+}
+
+/* Blue Selection */
+
+.blue-selection {
+    background-color: #ddf7ff;
+    border-radius: 12px;
+}
+
+#blue-quick-start, #blue-overview {
+    display: inline-block;
+    color: #0077a6;
+    background-color: #e8f7fe;
+    padding: 10px 180px 10px 3px;
+}
+
+#blue-learn {
+    color: #0077a6;
+    padding: 10px 5px 10px 5px;
+    margin: -10px;
+} 
+
+
+
+
+
