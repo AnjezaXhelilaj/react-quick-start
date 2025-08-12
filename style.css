@@ -165,19 +165,16 @@ main {
 
 /* Left Sidebar */
 
-.left-sidebar ul {
+.left-sidebar ul, .left-sidebar li {
     list-style: none;
-    padding: 0;
+    padding: 0; 
+    margin: 25px 0;
+    font-size: 14px;
 }
 
 .left-sidebar a[href] {
     color: #093e4d;
     text-decoration: none;
-}
-
-.left-sidebar li{
-    margin: 25px 0;
-    font-size: 14px;
 }
 
 .left-sidebar li i {
@@ -198,6 +195,23 @@ a.first-menu {
     font-size: 16px;
 }
 
+/* .left-sidebar a.first-menu:active{
+    background-color: #ddf7ff;
+    border-radius: 12px;
+    color: #0077a6;
+    background-color: #e8f7fe;
+    padding: 10px 180px 10px 3px;
+} */
+
+.left-sidebar a.first-menu:hover {
+    display: block;
+    width: 65%;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    padding: 10px 5px 10px 5px;
+    margin: -5px;
+}
+
 #describing-the-ui, #managing-state, #escape-hatches {
     margin-left: 105px;
 }
@@ -205,13 +219,12 @@ a.first-menu {
 #left-sidebar-search {
     display: flex;
     align-items: center;
+    height: 2rem;
     background-color: #f1f2f4;
     border-radius: 9999px;
-    padding: 4px 12px;
-    width: 70%;
-    height: 60%;
-    gap: 10px;
-
+    padding: 4px 15px;
+    width: 65%;
+    gap: 11px;
 }
 
 /* Drop Down Menu */
@@ -223,6 +236,25 @@ a.first-menu {
 #react-compiler {
     margin-left: 117px;
 }
+
+/* 
+.content {
+  display: none;
+}
+
+.dropdown:active .content {
+   display: block;
+}
+
+.dropdown{
+    position: relative;
+}
+
+.content a:active {
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    padding: 10px 140px 10px 2px;
+}  */
 
 /* Main Content */
 
@@ -381,13 +413,12 @@ main>p:first-of-type {
 
 /* Blue Selection */
 
-.blue-selection {
+ .blue-selection {
     background-color: #ddf7ff;
     border-radius: 12px;
 }
 
 #blue-quick-start, #blue-overview {
-    display: inline-block;
     color: #0077a6;
     background-color: #e8f7fe;
     padding: 10px 180px 10px 3px;
