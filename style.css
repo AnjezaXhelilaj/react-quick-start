@@ -198,18 +198,14 @@ header {
 
 /* Left Sidebar */
 
-<<<<<<< Updated upstream
-.left-sidebar ul, .left-sidebar li {
-=======
 .left-sidebar {
   overflow-y: auto;
 }
 
-.left-sidebar ul, .dropdown {
->>>>>>> Stashed changes
+.left-sidebar ul, .left-sidebar li, .dropdown {
     list-style: none;
     padding: 0; 
-    margin: 25px 0;
+    margin: 20px 0;
     font-size: 14px;
 }
 
@@ -219,7 +215,7 @@ header {
 }
 
 .left-sidebar li i {
-   position: absolute;
+   position: sticky;
    margin-left: 150px;
 }
 
@@ -263,16 +259,13 @@ a.first-menu {
     height: 2rem;
     background-color: #f1f2f4;
     border-radius: 9999px;
-<<<<<<< Updated upstream
     padding: 4px 15px;
     width: 65%;
     gap: 11px;
-=======
     padding: 4px 12px;
     width: 70%;
     height: 2rem;
     gap: 10px;
->>>>>>> Stashed changes
 }
 
 /* Drop Down Menu */
@@ -467,7 +460,7 @@ main>p:first-of-type {
 #blue-quick-start, #blue-overview {
     color: #0077a6;
     background-color: #e8f7fe;
-    padding: 10px 180px 10px 3px;
+    padding: 10px 50px 10px 3px;
 }
 
 #blue-learn {
