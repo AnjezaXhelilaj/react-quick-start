@@ -3,8 +3,38 @@
     font-family: "Inter", sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.left-sidebar,
+main,
+.right-sidebar {
+  min-height: 0;    
+  overflow-y: auto; 
+  flex-shrink: 1;
+}
+
+.left-sidebar::-webkit-scrollbar,
+main::-webkit-scrollbar,
+.right-sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.left-sidebar::-webkit-scrollbar-track,
+main::-webkit-scrollbar-track,
+.right-sidebar::-webkit-scrollbar-track {
+  background: #f1f2f4;
+  border-radius: 10px;
+}
+
+.left-sidebar::-webkit-scrollbar-thumb,
+main::-webkit-scrollbar-thumb,
+.right-sidebar::-webkit-scrollbar-thumb {
+  background: #def2f9;
+  border-radius: 10px;
 }
 
 /* Global Styles */
@@ -41,6 +71,25 @@ h5 {
     color: #32afd1;
     text-decoration: none;
     font-style: bold;
+}
+
+.main-layout {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    flex: 1;
+    height: calc(100vh - 80px); 
+    overflow: hidden;
+}
+
+aside {
+    flex: 0.8;
+}
+
+main {
+    flex: 2;
+    overflow-y: auto;
+    padding: 0 10px;
 }
 
 /* Top Nav Bar */
@@ -147,25 +196,17 @@ header {
     cursor: pointer;
 }
 
-.main-layout {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 2rem;
-    flex: 1;
-}
-
-aside {
-    flex: 0.8;
-}
-
-main {
-    flex: 2;
-}
-
 /* Left Sidebar */
 
+<<<<<<< Updated upstream
 .left-sidebar ul, .left-sidebar li {
+=======
+.left-sidebar {
+  overflow-y: auto;
+}
+
+.left-sidebar ul, .dropdown {
+>>>>>>> Stashed changes
     list-style: none;
     padding: 0; 
     margin: 25px 0;
@@ -222,9 +263,16 @@ a.first-menu {
     height: 2rem;
     background-color: #f1f2f4;
     border-radius: 9999px;
+<<<<<<< Updated upstream
     padding: 4px 15px;
     width: 65%;
     gap: 11px;
+=======
+    padding: 4px 12px;
+    width: 70%;
+    height: 2rem;
+    gap: 10px;
+>>>>>>> Stashed changes
 }
 
 /* Drop Down Menu */
@@ -342,6 +390,7 @@ main>p:first-of-type {
 /* Right Sidebar */
 
 .right-sidebar {
+    overflow-y: auto;
     flex: 0.6;
 }
 
@@ -358,12 +407,13 @@ main>p:first-of-type {
 .right-sidebar li {
     margin: 25px 0;
     font-size: 14px;
+    list-style: none;
 }
 
 /* Footer */
 
 .footer {
-    background-color: #f8f9fa;
+    background-color: white;
     padding: 2rem;
     border-top: 1px solid #dee2e6;
     width: 900px;
